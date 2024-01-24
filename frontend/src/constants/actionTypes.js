@@ -1,0 +1,6 @@
+export const LOGIN = "LOGIN";
+export const LOGOUT = "LOGOUT";
+export const TOSSCOIN = "TOSSCOIN";
+export const UPDATEHISTORY = "UPDATEHISTORY"
+export const UPDATEBALANCE = "UPDATEBALANCE"
+export const INITIALIZEHISTORY = "INITIALIZEHISTORY"
