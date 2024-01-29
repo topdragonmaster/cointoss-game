@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { AppBar, Typography, Toolbar, Avatar, Button } from "@mui/material";
+import { AppBar, Typography, Toolbar, Avatar, Button, Menu, MenuItem } from "@mui/material";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { jwtDecode } from "jwt-decode";
@@ -45,7 +45,18 @@ const Navbar = () => {
         >
           CoinToss
         </Typography>
+
       </div>
+      <Menu
+        open={true}
+      >
+        <MenuItem onClick={() => history('/')}>
+          <Typography textAlign="center">Home</Typography>
+        </MenuItem>
+        <MenuItem onClick={() => history('/leaderboard')}>
+          < Typography textAlign="center" > LeaderBoard</Typography>
+        </MenuItem>
+      </Menu >
       <Toolbar sx={styles.toolbar}>
         {user !== "null" && user !== null ? (
           <div sx={styles.profile}>
@@ -84,7 +95,7 @@ const Navbar = () => {
           </Button>
         )}
       </Toolbar>
-    </AppBar>
+    </AppBar >
   );
 };
 

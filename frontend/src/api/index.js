@@ -17,3 +17,5 @@ export const tossCoin = (formData) =>
   API.post("/api/game/toss", formData);
 export const getHistory = () =>
   API.get("/api/game/getHistory");
+export const getLeaderboard = () =>
+  API.get("/api/game/getLeaderboard");
